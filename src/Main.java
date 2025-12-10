@@ -43,14 +43,6 @@ public class Main {
                 merged[k++] = teamB[j++];
             }
         }
-
-        while (i < teamA.length && k < 10) {
-            merged[k++] = teamA[i++];
-        }
-
-        while (j < teamB.length && k < 10) {
-            merged[k++] = teamB[j++];
-        }
         return merged;
     }
 }
