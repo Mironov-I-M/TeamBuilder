@@ -14,9 +14,7 @@ public class Main {
         System.out.println(Arrays.toString(nationalTeam)); // [51, 45, 31, 31, 30, 24, 22, 20, 18, 17]
     }
 
-    /**
-     * Метод для слияния всех команд в одну национальную
-     */
+
     public static int[] mergeAll(int[][] teams) {
 
         if (teams == null || teams.length == 0) {
@@ -33,7 +31,7 @@ public class Main {
     }
 
     public static int[] merge(int[] teamA, int[] teamB) {
-        int[] merged = new int[10]; // Итоговый массив на 10 элементов
+        int[] merged = new int[10];
         int i = 0, j = 0, k = 0;
 
         while (i < teamA.length && j < teamB.length && k < 10) {
@@ -42,14 +40,6 @@ public class Main {
             } else {
                 merged[k++] = teamB[j++];
             }
-        }
-
-        while (i < teamA.length && k < 10) {
-            merged[k++] = teamA[i++];
-        }
-
-        while (j < teamB.length && k < 10) {
-            merged[k++] = teamB[j++];
         }
         return merged;
     }
